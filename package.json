@@ -1,0 +1,16 @@
+{
+  "name": "mission-control",
+  "version": "1.0.0",
+  "description": "Shared Convex backend for the Jarvis agent team",
+  "main": "mc.js",
+  "scripts": {
+    "deploy": "npx convex deploy",
+    "dev": "npx convex dev"
+  },
+  "dependencies": {
+    "convex": "^1.17.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

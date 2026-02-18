@@ -1,0 +1,5 @@
+node_modules/
+.mc-config.json
+convex/_generated/
+.env
+*.local
