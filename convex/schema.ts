@@ -56,4 +56,16 @@ export default defineSchema({
   })
     .index("by_agent", ["mentionedAgentId"])
     .index("by_delivered", ["delivered"]),
+
+  calendar: defineTable({
+    title: v.string(),
+    description: v.string(),
+    schedule: v.string(),
+    cronExpr: v.string(),
+    enabled: v.boolean(),
+    type: v.union(v.literal("cron"), v.literal("task")),
+    nextRunAt: v.optional(v.number()),
+    lastRunAt: v.optional(v.number()),
+    agentId: v.string(),
+  }).index("by_type", ["type"]),
 });
